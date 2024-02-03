@@ -1,0 +1,16 @@
+{
+  "name": "GabeeCoding.github.io",
+  "short_name": "GabeeCoding",
+  "description": "Gabriel's website",
+  "start_url": "/",
+  "background_color": "#000000",
+  "theme_color": "#303030",
+  "display": "standalone", 
+  "icons": [
+    {
+      "src": "/wojak_drive.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
