@@ -22,44 +22,24 @@ h1, p {
 	margin: 0.67em 0
 }
 
+p {
+	font-size: 16px
+}
+
 body {
 	background-color: var(--bg);
 	color: white;
 	font-family: "Roboto Mono"
 }
 
-.main {
-	position: relative;
-	z-index: 100;
-	max-width: 65em;
-	margin: auto;
-	padding: 1em;
-	word-wrap: break-word;
-	font-weight: bold;
-}
-
-/*
-nav {
-	overflow: hidden;
-	background-color: #f9f8ff;
-	color: #222;
-	position: relative;
-	top: 0;
-	left: 0;
+.main_wrapper {
+	position: absolute;
+	top: 85%;
 	width: 100%;
-	border-radius: 0.25em;
 }
-
-nav a {
-	float: left;
-	display: block;
-	color: black;
-	text-align: center;
-	padding: 14px;
-}
-*/
 
 nav {
+	z-index: 1000;
 	overflow: hidden;
 	display: flex;
 	align-items: center;
@@ -88,6 +68,18 @@ nav a {
 	left: 0;
 }
 
+.bigtext-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+}
+
+.bigtext-wrapper * {
+	font-size: 3em
+}
+
 .section-bgimg {
 	mix-blend-mode: normal;
 	background-image: url("background.jpg");
@@ -100,4 +92,36 @@ nav a {
 	width: 100%;
 	height: 100%;
 	z-index: -100
+}
+
+.animated {
+	overflow: hidden
+}
+
+.animated > h1 {
+	display: block;
+	height: 100%;
+	margin: 0;
+	white-space: nowrap;
+	width: 100%;
+	transform: translateX(-180%);
+	animation: scroll 9s linear infinite;
+}
+
+.main {
+	max-width: 65em;
+	margin: auto;
+	padding: 1em;
+	word-wrap: break-word;
+	font-weight: bold;
+}
+
+.main > * {
+	color: #FFFFFF
+}
+
+@keyframes scroll {
+	to {
+		transform: translateX(180%)
+	}
 }
